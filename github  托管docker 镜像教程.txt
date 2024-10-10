@@ -1,0 +1,28 @@
+github  托管docker 镜像
+Token：
+
+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
+
+
+https://github.com/dogwalkerg?tab=packages
+
+下面执行登录：
+echo "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" | docker login ghcr.io -u YOUR_GITHUB_USERNAME --password-stdin
+
+
+docker tag e9aa8fc06319 ghcr.io/dogwalkerg/docker_images/open-webui     ## 镜像重命名为ghcr.io/dogwalkerg/docker_images开头【镜像名open-webui】
+
+下面在执行推送上传
+docker push ghcr.io/dogwalkerg/docker_images/open-webui
+
+docker tag 52ebfd4ed926 ghcr.io/dogwalkerg/docker_nps/nps:latest
+docker push ghcr.io/dogwalkerg/docker_nps/nps:latest
+
+
+docker tag cad4d73b481e ghcr.io/dogwalkerg/docker_nps/npc:latest
+docker push ghcr.io/dogwalkerg/docker_nps/npc:latest
+
+
+docker tag a1d8b8c20812 ghcr.io/dogwalkerg/docker_images_my/argo-nezha:latest
+docker push ghcr.io/dogwalkerg/docker_images_my/argo-nezha:latest
+
